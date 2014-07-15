@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+
   resources :projects do
     resources :pledges, :only => [:show, :create, :destroy]
+    resources :rewards, :only => [:show, :create, :destroy]
   end
   resources :users, :only => [:new, :create]
   resources :sessions, :only => [:new, :create, :destroy]
