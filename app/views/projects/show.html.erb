@@ -9,7 +9,7 @@
       <%= pledge.amount_in_cents %>
       <br>
       <% if pledge.user != nil %>
-        <em> by <%= pledge.user.email %></em>
+        <em> by <%= pledge.user.name %></em>
         Added on: <%= pledge.created_at %>
       <% end %>
     </p>
