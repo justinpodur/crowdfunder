@@ -9,6 +9,10 @@ class ProjectsController < ApplicationController
 
   def new
   	@project = Project.new
+
+  	today = Date.today
+  	two_months_away = today + 60.days
+  	@limit = (today..two_months_away)
   end
 
   def edit

@@ -14,6 +14,11 @@
     <%= f.number_field :goal_in_cents %>
     </div>
 
+    <div>
+    <%= f.label :deadline %>
+    <%= f.select(:deadline, options_for_select(@limit)) %>
+    </div>
+
     <%= f.submit %>
 
 <% end %>
