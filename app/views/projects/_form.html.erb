@@ -11,27 +11,27 @@
 </div>
 <% end %>
 
-<div>
+<div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
 </div>
 
-<div>
+<div class="field">
     <%= f.label :description %>
     <%= f.text_field :description %>
 </div>
 
-<div>
+<div class="field">
     <%= f.label :goal_in_cents %>
     <%= f.number_field :goal_in_cents %>
 </div>
 
-<div>
+<div class="field">
     <%= f.label :deadline %>
     <%= f.select(:deadline, options_for_select(@limit)) %>
 </div>
 
-<div>
+<div class="actions">
     <%= f.submit %>
 </div>
 
