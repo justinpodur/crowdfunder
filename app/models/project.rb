@@ -1,4 +1,8 @@
 class Project < ActiveRecord::Base
+
+	has_many :pledges
+	has_many :users, :through => :pledges
+
 	validates :description, :name, :deadline, :presence => true
 	validates :goal_in_cents, :numericality => {:only_integer => true}
 

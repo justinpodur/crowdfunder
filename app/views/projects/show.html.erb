@@ -1,2 +1,46 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<% if current_user %>
+
+  <h3>Pledges</h3>
+
+  <p>Pledges for <%= @project.name %></p>
+
+  <% @project.pledges.each do |pledge| %>
+    <p>
+      <%= pledge.amount_in_cents %>
+      <br>
+      <% if pledge.user != nil %>
+        <em> by <%= pledge.user.email %></em>
+        Added on: <%= pledge.created_at %>
+      <% end %>
+    </p>
+  <% end %>
+
+  <h4>New Pledge</h4>
+
+  <%= form_for([@project, @pledge]) do |f| %>
+    <% if @pledge.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@pledge.errors.count, "error") %> prohibited this pledge from being saved:</h2>
+
+        <ul>
+        <% @pledge.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :amount_in_cents %><br />
+      <%= f.number_field :amount_in_cents %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+<% else %>
+  <p>Please <%= link_to "log in", new_session_path %> to add a pledge.</p> 
+
+
+<% end %>

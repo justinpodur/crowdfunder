@@ -1,10 +1,17 @@
 class ProjectsController < ApplicationController
+  before_filter :ensure_logged_in, :only => [:show]
+
   def index
   	@projects = Project.all
   end
 
   def show
   	@project = Project.find(params[:id])
+
+    if current_user
+      @pledge = @project.pledges.build
+    end
+
   end
 
   def new
