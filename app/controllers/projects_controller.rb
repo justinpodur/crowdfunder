@@ -9,10 +9,7 @@ class ProjectsController < ApplicationController
 
   def new
   	@project = Project.new
-
-  	today = Date.today
-  	two_months_away = today + 60.days
-  	@limit = (today..two_months_away)
+  	set_limit
   end
 
   def edit
@@ -21,6 +18,7 @@ class ProjectsController < ApplicationController
 
   def create
   	@project = Project.new(project_params)
+  	set_limit
 
   	if @project.save
   		redirect_to projects_url
@@ -39,9 +37,17 @@ class ProjectsController < ApplicationController
   	end
   end
 
+
+
   private 
   def project_params
-  	params.require(:project).permit(:name, :description, :goal_in_cents)
+  	params.require(:project).permit(:name, :description, :goal_in_cents, :deadline)
+  end
+
+  def set_limit
+  	today = Date.today
+  	two_months_away = today + 60.days
+  	@limit = (today..two_months_away)
   end
 
 end
