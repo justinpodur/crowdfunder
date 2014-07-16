@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
 
     if current_user
       @pledge = @project.pledges.build
+      @reward = @project.rewards.build
     end
 
   end

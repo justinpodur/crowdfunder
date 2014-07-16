@@ -1,4 +1,35 @@
 <% if current_user %>
+   <h3>Rewards</h3>
+
+  <p>Rewards for <%= @project.name %></p>
+
+  <% @project.rewards.each do |reward| %>
+    <p>
+      <%= reward.level %>
+      <br>
+      <% if reward.project != nil %>
+        <em> by <%= reward.project.name %></em>
+        Added on: <%= reward.created_at %>
+      <% end %>
+    </p>
+  <% end %>
+
+  <h4>New reward</h4>
+
+  <%= form_for([@project, @reward]) do |f| %>
+    <% if @reward.errors.any? %>
+
+      <div id="error_explanation">
+        <h2><%= pluralize(@reward.errors.count, "error") %> prohibited this reward from being saved:</h2>
+
+        <ul>
+        <% @reward.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
 
   <h3>Pledges</h3>
 
