@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Crowdfunder</title>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<%= csrf_meta_tags %>
-</head>
-<body>
-	<% if flash[:notice] %>
-		<p id="notice"><%= flash[:notice] %></p>
-	<% end %>
-	<% if flash[:alert] %>
-		<p id="alert"><%= flash[:alert] %></p>
-	<% end %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+  <% if flash[:notice] %>
+        <p id="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert] %>
+        <p id="alert"><%= flash[:alert] %></p>
+    <% end %>
+
+    <%= yield %>
 
  <p class="userinfo">
       <% if current_user %>
@@ -24,5 +31,6 @@
       <% end %>
   </p>
 
-</body>
+
+  </body>
 </html>
