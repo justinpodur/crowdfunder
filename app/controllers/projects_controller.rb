@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_filter :ensure_logged_in, :only => [:show]
-
+  before_filter :set_limit
   def index
   	@projects = Project.all
   end
@@ -17,7 +17,6 @@ class ProjectsController < ApplicationController
 
   def new
   	@project = Project.new
-  	set_limit
   end
 
   def edit
@@ -26,7 +25,7 @@ class ProjectsController < ApplicationController
 
   def create
   	@project = Project.new(project_params)
-  	set_limit
+
 
   	if @project.save
   		redirect_to projects_url

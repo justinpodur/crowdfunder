@@ -10,38 +10,50 @@
     </ul>
 </div>
 <% end %>
+<div class="le_form">
+    <div class="field">
+        <div class="small-12 columns">
+            <%= f.label :Project_name %>
+            <%= f.text_field :name %>
+        </div>
+        </div>
+        
+    </div>
 
-<div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <div class="field">
+        <div class="small-12 columns">
+            <label class= "inline"><%= f.label :description %></label>
+            <%= f.text_field :description %>
+        </div>
+    </div>
+        
+    </div>
+
+    <div class="field">
+        <div class="small-12 columns">
+            <label class= "inline"><%= f.label :goal_in_cents %></label>
+            <%= f.number_field :goal_in_cents %>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="small-12 columns">
+            <label class= "inline"><%= f.label :deadline %></label>
+            <%= f.select(:deadline, options_for_select(@limit)) %>
+        </div>
+    </div>
+
+    <div class="field">
+        <%= f.fields_for :rewards do |reward| %>
+            <%= render 'reward_fields', :f => reward %>
+        <% end %>
+
+        <%= link_to_add_association 'add reward', f, :rewards %>
+    </div>
+        
+
+    <div class="actions">
+         <%= f.submit :class => 'button [radius round]' %>
+    </div>
 </div>
-
-<div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-</div>
-
-<div class="field">
-    <%= f.label :goal_in_cents %>
-    <%= f.number_field :goal_in_cents %>
-</div>
-
-<div class="field">
-    <%= f.label :deadline %>
-    <%= f.select(:deadline, options_for_select(@limit)) %>
-</div>
-
-<div class="field">
-    <%= f.fields_for :rewards do |reward| %>
-        <%= render 'reward_fields', :f => reward %>
-    <% end %>
-
-    <%= link_to_add_association 'add reward', f, :rewards %>
-</div>
-    
-
-<div class="actions">
-    <%= f.submit %>
-</div>
-
 <% end %>
