@@ -31,6 +31,15 @@
     <%= f.select(:deadline, options_for_select(@limit)) %>
 </div>
 
+<div class="field">
+    <%= f.fields_for :rewards do |reward| %>
+        <%= render 'reward_fields', :f => reward %>
+    <% end %>
+
+    <%= link_to_add_association 'add reward', f, :rewards %>
+</div>
+    
+
 <div class="actions">
     <%= f.submit %>
 </div>
