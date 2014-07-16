@@ -1,3 +1,12 @@
+FINISHED WORK ON JULY 15/14 at 5:15pm.
+
+Halfway through building REWARDS. Pick up at rainforest tutorial "concept: filters" for rewards model. 
+
+Once rewards is built/working; 
+
+-CSS (foundation)
+-TESTS
+
 =======
 
 The cocoon gem works well. 

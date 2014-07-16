@@ -1,4 +1,14 @@
 <% if current_user %>
+
+<h1>Project Name: <%= @project.name %></h1>
+<div class = "description">
+<h2><%= @project.description %></h2>
+</div>
+<div class = "goal">
+<h2>Goal in cents: <%= @project.goal_in_cents %></h2>
+</div>
+
+<div class = "rewards">
    <h3>Rewards</h3>
 
   <p>Rewards for <%= @project.name %></p>
@@ -14,23 +24,9 @@
     </p>
   <% end %>
 
-  <h4>New reward</h4>
+</div>
 
-  <%= form_for([@project, @reward]) do |f| %>
-    <% if @reward.errors.any? %>
-
-      <div id="error_explanation">
-        <h2><%= pluralize(@reward.errors.count, "error") %> prohibited this reward from being saved:</h2>
-
-        <ul>
-        <% @reward.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-  <% end %>
-
+<div class = "pledges">
   <h3>Pledges</h3>
 
   <p>Pledges for <%= @project.name %></p>
@@ -75,3 +71,4 @@
 
 
 <% end %>
+</div>
