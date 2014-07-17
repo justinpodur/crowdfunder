@@ -1,3 +1,11 @@
+JULY 17:
+
+CSS/SASS with Foundation
+
+TESTS
+
+Then: add sorcery, cancan, tagging, image uploads
+
 
 JULY 16: The layouts/application.html.erb file:
 

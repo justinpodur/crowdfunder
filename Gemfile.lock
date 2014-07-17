@@ -27,6 +27,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts_as_taggable_on (3.0.0.rc2)
+      rails (>= 3, < 5)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     builder (3.2.2)
@@ -86,6 +88,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    rmagick (2.13.2)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -124,6 +127,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_taggable_on
   bcrypt (~> 3.1.7)
   carrierwave
   cocoon
@@ -133,6 +137,7 @@ DEPENDENCIES
   jquery-rails
   rails (= 4.1.1)
   rails_layout
+  rmagick
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
