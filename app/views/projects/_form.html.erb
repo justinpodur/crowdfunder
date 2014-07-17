@@ -27,9 +27,14 @@
         </div>
     </div>
     <div class="field">
-        <%= f.label :image %>
-        <%= f.file_field :image %>
+        <div class="small-12 columns">
+
+            <label class="inline"><%= f.label :image %></labe>
+            <%= f.file_field :image %>
+        </div>
     </div>
+        
+
 
     <div class="field">
         <div class="small-6 columns">
@@ -50,7 +55,7 @@
         <%= f.fields_for :rewards do |reward| %>
             <%= render 'reward_fields', :f => reward %>
         <% end %>
-        <%= link_to_add_association 'Add a reward', f, :rewards, :class => 'button [tiny small large]' %>
+        <%= link_to_add_association 'Add a rewards', f, :rewards, :class => 'button [tiny small large]' %>
     </div>
         
 <!-- this needs to be centered -->
