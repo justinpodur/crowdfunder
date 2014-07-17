@@ -1,8 +1,11 @@
 JULY 17:
 
-CSS/SASS with Foundation - check
+CSS/SASS with Foundation - check;
 
-TESTS
+Fix the rewards button
+Make an owner-user and a pledger-user. owner_id thing...
+
+ADD TESTS
 
 Then: add sorcery, cancan, tagging, image uploads
 
