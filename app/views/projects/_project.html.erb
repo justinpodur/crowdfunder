@@ -1,0 +1,24 @@
+<%= link_to project_path(project.id) do %>
+<% end %>
+
+<article>
+ 
+        <h3><a href="#"><%= project.name %></a></h3>
+        <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
+ 
+        <div class="row">
+          <div class="large-6 columns">
+            <p></p>
+          </div>
+          <div class="large-6 columns">
+            <img src="http://placehold.it/400x240&text=[img]"/>
+          </div>
+        </div>
+ 
+        <p><%= project.description %></p>
+ 
+        <p><%= project.goal_in_cents %></p>
+ 
+</article>
+
+      <hr/>
