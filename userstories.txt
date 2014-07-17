@@ -3,7 +3,8 @@ JULY 17:
 CSS/SASS with Foundation - check;
 
 Fix the rewards button
-Make an owner-user and a pledger-user. owner_id thing...
+
+Make pages to show all of the owner's projects, all the backed projects (create a partial for this and render it). 
 
 ADD TESTS
 

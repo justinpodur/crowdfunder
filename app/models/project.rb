@@ -3,10 +3,10 @@ class Project < ActiveRecord::Base
 	has_many :rewards
 	accepts_nested_attributes_for :rewards, :reject_if => :all_blank, :allow_destroy => true
 	has_many :pledges
-	has_many :users, :through => :pledges, :foreign_key => "user_id"
+	has_many :backers, :through => :pledges, source: :user, :foreign_key => "user_id"
 	belongs_to :owner, class_name: "User"
 
-	validates :description, :name, :deadline, :presence => true
+	validates :description, :name, :deadline, :owner, :presence => true
 	validates :goal_in_cents, :numericality => {:only_integer => true}
 
 	mount_uploader :image, ImageUploader

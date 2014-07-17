@@ -51,12 +51,14 @@
     </div>
 
 <!-- This doesnt seems to work with foundation, but was working before  -->
-    <div class="field">
+<div class="field">
+    <div class="reward">
         <%= f.fields_for :rewards do |reward| %>
-            <%= render 'reward_fields', :f => reward %>
+        <%= render 'reward_fields', :f => reward %>
         <% end %>
-        <%= link_to_add_association 'Add a rewards', f, :rewards, :class => 'button [tiny small large]' %>
+        <%= link_to_add_association 'Add a reward', f, :rewards, :class => 'button [tiny small large]' %>
     </div>
+</div>
         
 <!-- this needs to be centered -->
     <div class="actions">
