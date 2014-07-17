@@ -19,19 +19,19 @@ class ProjectsController < ApplicationController
   	@project = Project.new
   end
 
-  def edit
-  	@project = Project.find(params[:id])
+  def create
+    @project = Project.new(project_params)
+
+
+    if @project.save
+      redirect_to projects_url
+    else
+      render :new
+    end
   end
 
-  def create
-  	@project = Project.new(project_params)
-
-
-  	if @project.save
-  		redirect_to projects_url
-  	else
-  		render :new
-  	end
+  def edit
+  	@project = Project.find(params[:id])
   end
 
   def update
@@ -44,7 +44,11 @@ class ProjectsController < ApplicationController
   	end
   end
 
+  def destroy
+    @project =Project.find(params[:id])
 
+    @project.destroy
+  end 
 
   private 
   def project_params
