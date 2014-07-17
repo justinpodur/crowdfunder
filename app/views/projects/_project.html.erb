@@ -4,21 +4,21 @@
 <article>
  
         <h3><a href="#"><%= project.name %></a></h3>
-        <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
+        <h4>Goal: $<%= project.formatted_goal %></h4>
+        <h5>Funding Deadline: %<%= project.deadline %></h5>
+        <h6>Project Owner: <a href="#">John Smith</a></h6>
  
         <div class="row">
           <div class="large-6 columns">
-            <p></p>
+            <p><%= project.description %></p>
+            <p>This is the description of the project, which could be much more verbose
+             than the above test descriptions.</p>
           </div>
           <div class="large-6 columns">
 	          <img src="http://placekitten.com/400/240">
            <!--  <img src="http://placehold.it/400x240&text=[img]"/> -->
           </div>
         </div>
- 
-        <p><%= project.description %></p>
- 
-        <p>$<%= project.formatted_goal %></p>
  
 </article>
 
