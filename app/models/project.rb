@@ -3,7 +3,8 @@ class Project < ActiveRecord::Base
 	has_many :rewards
 	accepts_nested_attributes_for :rewards, :reject_if => :all_blank, :allow_destroy => true
 	has_many :pledges
-	has_many :users, :through => :pledges
+	has_many :users, :through => :pledges, :foreign_key => "user_id"
+	belongs_to :owner, class_name: "User"
 
 	validates :description, :name, :deadline, :presence => true
 	validates :goal_in_cents, :numericality => {:only_integer => true}
