@@ -13,7 +13,7 @@
 <div class="le_form">
     <div class="field">
         <div class="small-12 columns">
-            <%= f.label :Project_name %>
+            <label class= "inline"><%= f.label :Project_name %></label> 
             <%= f.text_field :name %>
         </div>
         </div>
@@ -23,35 +23,36 @@
     <div class="field">
         <div class="small-12 columns">
             <label class= "inline"><%= f.label :description %></label>
-            <%= f.text_field :description %>
+            <%= f.text_area :description %>
         </div>
     </div>
         
     </div>
 
     <div class="field">
-        <div class="small-12 columns">
+        <div class="small-6 columns">
             <label class= "inline"><%= f.label :goal_in_cents %></label>
             <%= f.number_field :goal_in_cents %>
         </div>
     </div>
 
     <div class="field">
-        <div class="small-12 columns">
+        <div class="small-6 columns">
             <label class= "inline"><%= f.label :deadline %></label>
             <%= f.select(:deadline, options_for_select(@limit)) %>
         </div>
     </div>
 
+<!-- This doesnt seems to work with foundation, but was working before  -->
     <div class="field">
         <%= f.fields_for :rewards do |reward| %>
             <%= render 'reward_fields', :f => reward %>
         <% end %>
 
-        <%= link_to_add_association 'add reward', f, :rewards %>
+        <%= link_to_add_association 'Add a reward', f, :rewards, :class => 'button [tiny small large]' %>
     </div>
         
-
+<!-- this needs to be centered -->
     <div class="actions">
          <%= f.submit :class => 'button [radius round]' %>
     </div>
