@@ -30,6 +30,12 @@ gem 'spring',        group: :development
 # For adding links to associations
 gem 'cocoon'
 
+gem 'rmagick', :require => 'RMagick'
+
+gem 'acts_as_taggable_on'
+
+gem 'carrierwave'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
@@ -39,6 +45,7 @@ gem 'foundation-rails'
 group :development do
 	gem 'rails_layout'
 end
+
 
 # Use unicorn as the app server
 # gem 'unicorn'
