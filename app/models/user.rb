@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
 	has_many :rewards, :through => :projects #i think this means one 
 	#reward per project
 
-	validates_presence_of :name
+	validates_presence_of :name, :email, :password
 	has_secure_password
 end

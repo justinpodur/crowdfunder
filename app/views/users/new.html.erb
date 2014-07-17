@@ -12,24 +12,26 @@
     </div>
   <% end %>
   <div class="field">
-    <div></div>
     <%= f.label :name %><br/>
     <%= f.text_field :name %>
   </div>
+  
   <div class="field">
-    <div></div>
     <%= f.label :email %><br/>
     <%= f.text_field :email %>
   </div>
+
   <div class="field">
-    <div></div>
     <%= f.label :password %><br/>
     <%= f.password_field :password %>
   </div>
+
   <div class="field">
-    <div></div>
     <%= f.label :password_confirmation %><br/>
     <%= f.password_field :password_confirmation %>
   </div>
-  <div class="actions"><%= f.submit :class => 'button [radius button]' %></div>
+
+  <div class="actions">
+    <%= f.submit :class => 'button [radius button]' %>
+  </div>
 <% end %>

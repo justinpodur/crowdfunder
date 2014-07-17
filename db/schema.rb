@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140717204014) do
+=======
+ActiveRecord::Schema.define(version: 20140717212014) do
+>>>>>>> userpage
 
   create_table "pledges", force: true do |t|
     t.integer  "amount_in_cents"
@@ -65,6 +69,8 @@ ActiveRecord::Schema.define(version: 20140717204014) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "image"
+    t.text     "bio"
   end
 
 end

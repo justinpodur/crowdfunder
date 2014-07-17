@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :pledges, :only => [:show, :create, :destroy]
     resources :rewards, :only => [:show, :create, :destroy]
   end
-  resources :users, :only => [:new, :create]
+  resources :users
   resources :sessions, :only => [:new, :create, :destroy]
 
   root to: "welcome#index"
