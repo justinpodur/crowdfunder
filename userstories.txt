@@ -1,6 +1,6 @@
 JULY 17:
 
-CSS/SASS with Foundation
+CSS/SASS with Foundation - check
 
 TESTS
 
