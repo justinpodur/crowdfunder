@@ -11,15 +11,32 @@
       </ul>
     </div>
   <% end %>
+
 	<div class="field">
-    <%= f.label :name %><br/>
-    <%= f.text_field :name %>
+		<div class="small-10 columns">
+			<%= f.label :name %><br/>
+    	<%= f.text_field :name %>
+		</div>
   </div>
+
+	<div class="field">
+		<div class="small-10 columns">
+			<%= f.label :image %><br/>
+    	<%= f.file_field :image %>
+		</div>
+  </div>
+
   <div class="field">
-    <%= f.label :email %><br/>
-    <%= f.text_field :email %>
+  	<div class="small-10 columns">
+  		<%= f.label :email %><br/>
+    	<%= f.text_field :email %>
+  	</div>
   </div>
+
   <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image%>
+  	<div class="small-10 columns">
+  		<%= f.label :bio %><br/>
+    	<%= f.text_area :bio %>
+  	</div>
   </div>
+<% end %>
