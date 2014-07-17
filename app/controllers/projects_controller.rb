@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_filter :ensure_logged_in, :only => [:show]
   before_filter :set_limit
+
   def index
   	@projects = Project.all
   end
@@ -20,13 +21,8 @@ class ProjectsController < ApplicationController
   end
 
   def create
-<<<<<<< HEAD
   	@project = Project.new(project_params)
     @project.owner = current_user
-=======
-    @project = Project.new(project_params)
-
->>>>>>> userpage
 
     if @project.save
       redirect_to projects_url

@@ -56,13 +56,9 @@
         <%= f.fields_for :rewards do |reward| %>
         <%= render 'reward_fields', :f => reward %>
         <% end %>
-<<<<<<< HEAD
-        <%= link_to_add_association 'Add a reward', f, :rewards, :class => 'button [tiny small large]' %>
-=======
         <div class="small-12 columns">
            <%= link_to_add_association 'Add a rewards', f, :rewards, :class => 'button [tiny small large]' %> 
         </div>
->>>>>>> userpage
     </div>
 </div>
         
