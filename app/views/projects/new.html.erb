@@ -1,4 +1,10 @@
 <h1>Create a new project</h1>
+<% if current_user %>
+<p>Logged in as <%= current_user.name %></p>
+<% else %>
+<p>Please <%= link_to "log in", new_session_path %> to create a project.</p>
+<% end %>
+
 <p>
 	<%= render 'form' %>
 </p>

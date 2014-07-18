@@ -45,9 +45,14 @@
       </ul>
  
       <div class="panel">
-        <h5>Featured</h5>
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-        <a href="#">Read More →</a>
+        <% if current_user %>
+<h5>Hello, <%= current_user.name %></h5>
+    <p>Here, we will display all of the projects that you are backing.</p>
+        <%= link_to "Logout", session_path(current_user), method: :delete %>
+<% else %>
+<h5>Please <%= link_to "log in", new_session_path %> to create a project.</h5>
+<% end %>
+
       </div>
  
     </aside>
