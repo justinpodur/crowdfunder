@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :ensure_logged_in, :only => [:show]
+  before_filter :ensure_logged_in, :only => [:show, :new]
   before_filter :set_limit
 
   def index
@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
 
   def show
   	@project = Project.find(params[:id])
+    @user = User.find(params[:id])
 
     if current_user
       @pledge = @project.pledges.build
@@ -38,7 +39,7 @@ class ProjectsController < ApplicationController
   def update
   	@project = Project.find(params[:id])
 
-  	if @project.update_attributes(product_params)
+  	if @project.update_attributes(project_params)
   		redirect_to project_path(@project)
   	else
   		render :edit
