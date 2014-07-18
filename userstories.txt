@@ -4,7 +4,7 @@ CSS/SASS with Foundation - check;
 
 Fix the rewards button - CHECK!
 
-Image Uploader - 
+Image Uploader - CHECK!
 
 Make pages to show all of the owner's projects, all the backed projects (create a partial for this and render it). 
 
