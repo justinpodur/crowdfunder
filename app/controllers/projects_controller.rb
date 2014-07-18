@@ -53,7 +53,7 @@ class ProjectsController < ApplicationController
 
   private 
   def project_params
-  	params.require(:project).permit(:name, :description, :goal_in_cents, :deadline)
+  	params.require(:project).permit(:name, :description, :image, :goal_in_cents, :deadline, rewards_attributes: [:name, :level, :description])
   end
 
   def set_limit
