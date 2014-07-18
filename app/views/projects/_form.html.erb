@@ -1,3 +1,8 @@
+
+
+
+
+
 <%= form_for(@project, html: {multipart: true}) do |f| %>
 <% if @project.errors.any? %>
 <div id="error_explanation">
@@ -51,13 +56,17 @@
     </div>
 
 <!-- This doesnt seems to work with foundation, but was working before  -->
+
+
 <div class="field">
-    <div class="reward">
+    <div id="rewards">
         <%= f.fields_for :rewards do |reward| %>
         <%= render 'reward_fields', :f => reward %>
         <% end %>
         <div class="small-12 columns">
-           <%= link_to_add_association 'Add a rewards', f, :rewards, :class => 'button [tiny small large]' %> 
+        <div class="links">
+           <%= link_to_add_association 'Add a reward', f, :rewards, :class => 'button' %> 
+        </div>
         </div>
     </div>
 </div>
