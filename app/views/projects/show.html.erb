@@ -70,7 +70,7 @@
        <div class="panel">
         <h5>Rewards</h5>
         <div>
-          <% @project.rewards.each do |r| %>
+          <% @project.rewards.limit(5).each do |r| %>
               <p>Level : $<%= r.level %></p>
               <p>Package : <br><%= r.name %></p>
               <p>Description :<%= r.description %></p>
@@ -99,7 +99,7 @@
         <div class="large-6 columns">
           <ul class="inline-list right">
             <li><%= link_to 'Edit page', edit_project_path(@project) %></li>
-            <li><a href="#">Link 2</a></li>
+           
             <li><a href="#">Link 3</a></li>
             <li><a href="#">Link 4</a></li>
           </ul>
@@ -108,7 +108,8 @@
     </div>
   </footer>
 <% else %>
-    
+    <p>Please <%= link_to "log in", new_session_path %> to add a pledge.</p> 
+
 <% end %>
 
 

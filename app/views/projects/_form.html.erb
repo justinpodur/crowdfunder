@@ -60,8 +60,8 @@
 
 <div class="field">
     <div id="rewards">
-        <%= f.fields_for :rewards do |reward| %>
-        <%= render 'reward_fields', :f => reward %>
+        <%= f.fields_for :rewards, @project.rewards do |reward| %>
+            <%= render 'reward_fields', :f => reward %>
         <% end %>
         <div class="small-12 columns">
         <div class="links">
