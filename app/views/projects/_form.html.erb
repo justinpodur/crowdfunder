@@ -1,8 +1,4 @@
 
-
-
-
-
 <%= form_for(@project, html: {multipart: true}) do |f| %>
 <% if @project.errors.any? %>
 <div id="error_explanation">
@@ -60,7 +56,7 @@
 
 <div class="field">
     <div id="rewards">
-        <%= f.fields_for :rewards, @project.rewards do |reward| %>
+        <%= f.fields_for :rewards do |reward| %>
             <%= render 'reward_fields', :f => reward %>
         <% end %>
         <div class="small-12 columns">
