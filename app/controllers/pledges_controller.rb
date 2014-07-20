@@ -12,7 +12,7 @@ class PledgesController < ApplicationController
   def create
   	@pledge = @project.pledges.build(pledge_params)
   	@pledge.backer = current_user
-
+    
   if @pledge.save
   	redirect_to projects_path, notice: 'Pledge created successfully'
   else

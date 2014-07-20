@@ -11,10 +11,11 @@
   <% end %>
   <div class="field">
     <%= f.label :Amount %><br/>
-    <%= f.number_field :Amount_in_cents %>
+    <%= f.select(:Amount_in_cents, options_for_select([[$5, 5], [$20, 20], [$50, 50], [$100, 100]])) %>
   </div>
   
   <div class="actions">
     <%= f.submit :class => 'button [radius button]' %>
   </div>
 <% end %>
+

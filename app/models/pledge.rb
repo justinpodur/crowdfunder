@@ -2,6 +2,10 @@ class Pledge < ActiveRecord::Base
 	belongs_to :project
 	belongs_to :user
 
+	has_one :reward
+
+	validates :amount_in_cents, :presence => true
+
 		def formatted_amount
 			amount_in_dollars = amount_in_cents.to_f / 100
 			sprintf("%.2f", amount_in_dollars)

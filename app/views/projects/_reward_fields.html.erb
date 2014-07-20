@@ -5,7 +5,10 @@
   <%= f.label :name %>
   <%= f.text_field :name %><br>
   <%= f.label :description %>
-  <%= f.text_field :description %><br>
-  <%= link_to 'Delete', [@project, f.object], method: :delete %>   <!-- This line is giving trouble-->
+  <%= f.text_area :description %><br>
   <%= link_to_remove_association "remove reward", f, :class => 'button' %>
+  <% if f.object.persisted? %>
+        <%= f.label :_destroy, "Destroy" %><br/>
+        <%= f.check_box :_destroy %>
+  <% end %>
 </div>

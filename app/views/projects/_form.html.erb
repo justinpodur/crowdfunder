@@ -1,24 +1,24 @@
 
 <%= form_for(@project, html: {multipart: true}) do |f| %>
-<% if @project.errors.any? %>
-<div id="error_explanation">
-    <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved: </h2>
+    <% if @project.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved: </h2>
 
-    <ul>
-        <% @project.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-        <% end %>
-    </ul>
-</div>
-<% end %>
-<div class="le_form">
-    <div class="field">
-        <div class="small-12 columns">
-            <label class= "inline"><%= f.label :Project_name %></label> 
-            <%= f.text_field :name %>
+            <ul>
+                <% @project.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
         </div>
+    <% end %>
+    <div class="le_form">
+        <div class="field">
+            <div class="small-12 columns">
+                <label class= "inline"><%= f.label :Project_name %></label> 
+                <%= f.text_field :name %>
+            </div>
         </div>
-        
+            
     </div>
 
     <div class="field">
@@ -27,14 +27,14 @@
             <%= f.text_area :description %>
         </div>
     </div>
+
     <div class="field">
         <div class="small-12 columns">
-
             <label class="inline"><%= f.label :image %></label>
             <%= f.file_field :image %>
         </div>
     </div>
-        
+            
 
 
     <div class="field">
@@ -51,27 +51,26 @@
         </div>
     </div>
 
-<!-- This doesnt seems to work with foundation, but was working before  -->
+    <!-- This doesnt seems to work with foundation, but was working before  -->
 
 
-<div class="field">
-    <div id="rewards">
-        <%= f.fields_for :rewards do |reward| %>
-            <%= render 'reward_fields', :f => reward %>
-        <% end %>
-        <div class="small-12 columns">
-        <div class="links">
-           <%= link_to_add_association 'Add a reward', f, :rewards, :class => 'button' %> 
-        </div>
+    <div class="field">
+        <div id="rewards">
+            <%= f.fields_for :rewards do |reward| %>
+                <%= render 'reward_fields', :f => reward %>
+            <% end %>
+            <div class="small-12 columns">
+                <div class="links">
+                    <%= link_to_add_association 'Add a reward', f, (:rewards), :class => 'button' %> 
+                </div>
+            </div>
         </div>
     </div>
-</div>
-        
-<!-- this needs to be centered -->
+            
+    <!-- this needs to be centered -->
     <div class="actions">
         <div class="small-12 columns">
             <%= f.submit :class => 'button [radius round]' %>
         </div>
     </div>
-
 <% end %>
