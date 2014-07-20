@@ -1,75 +1,131 @@
+<<<<<<< HEAD
 <% if current_user %>
 <p>Logged in as <%= current_user.name %></p>
+=======
+ <% if current_user %>
+ 
+  <div class= "row">
+    <div class="large-12 columns" role="content">
+      <h1><%= @project.name %></h1>
+      <hr/>
+      <!-- This code is for the image and the description -->
+      <article>
+          <div class="large-3 columns">
+              <%= image_tag @project.image %><br>
+              <div class="panel">
+                <h5>Created By</h5>
+                  <%= link_to @project.owner.name %>
+              </div>
+          </div> 
+>>>>>>> projectspage
 
-<h1>Project Name: <%= @project.name %></h1>
-<div class = "description">
-<h2><%= @project.description %></h2>
-</div>
-<div class = "goal">
-<h2>Goal in cents: <%= @project.goal_in_cents %></h2>
-</div>
+          <div class="large-6 columns">
+            <h4>Project description :</h4>
+            <p><%= @project.description %></p>
+          </div> 
+          <h3></h3>
+               
+      </article>
 
-<div class = "rewards">
-   <h3>Rewards</h3>
+    <!-- This code is for the info section -->
+      <aside class="large-3 columns">
+        <div class="panel">
+          <h5>Info</h5>
+          <ul class="side-nav">
+            <li>
+              <div>
+                Backers:
+                <%= @project.pledges.length %>
+              </div>
+            </li>
+            <li>
+              <div>
+                Goal: 
+                $<%= @project.goal_in_cents %>
+              </div>
+            </li>
+            <li>
+              <div>
+                Deadline:
+                <%= @project.deadline.strftime("%A, %B %d, %Y")  %>
+              </div>
+            </li>
+          </ul>
+          <div class="button [radius button]">
+             <%= link_to 'Make a pledge', new_project_pledge_path(@project) %><br>
+             <small>$5 minimum pledge</small>
+          </div>
+         
 
-  <p>Rewards for <%= @project.name %></p>
+          <div class="panel callout">
+            <h5>Rewards</h5>
+            <div>
+              <% if @project.rewards != nil %>
+                <% @project.rewards.limit(5).each do |r| %>
+                  <p>Level : $<%= r.level %></p>
+                  <p>Package : <br><%= r.name %></p>
+                  <p>Description :<%= r.description %></p>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
 
-  <% @project.rewards.each do |reward| %>
-    <p>
-      <%= reward.level %>
-      <br>
-      <% if reward.project != nil %>
-        <em> by <%= reward.project.name %></em>
-        Added on: <%= reward.created_at %>
-      <% end %>
-    </p>
-  <% end %>
+        </div>
+      </aside>
+ 
+    </div>
 
-</div>
 
-<div class = "pledges">
-  <h3>Pledges</h3>
 
-  <p>Pledges for <%= @project.name %></p>
+<!-- This code is for the pledges panel -->
 
-  <% @project.pledges.each do |pledge| %>
-    <p>
-      <%= pledge.amount_in_cents %>
-      <br>
-      <% if pledge.user != nil %>
-        <em> by <%= pledge.user.name %></em>
-        Added on: <%= pledge.created_at %>
-      <% end %>
-    </p>
-  <% end %>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class = "panel">
 
-  <h4>Make a pledge</h4>
+        <h3>Pledges</h3>
 
-  <%= form_for([@project, @pledge]) do |f| %>
-    <% if @pledge.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@pledge.errors.count, "error") %> prohibited this pledge from being saved:</h2>
-
-        <ul>
-        <% @pledge.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+        <% @project.pledges.each do |pledge| %>
+          <p>
+            <%= pledge.amount_in_cents %><br>
+            <% if pledge.user != nil %>
+              <em> by <%= pledge.user.name %></em>
+              Added on: <%= pledge.created_at %>
+            <% else %>
+              <p>There are currently no pledges</p>
+            <% end %>
+          </p>
         <% end %>
-        </ul>
       </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :amount_in_cents %><br />
-      <%= f.number_field :amount_in_cents %>
     </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
+  </div>
+ 
+ 
+   
 
+ 
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright no one at all. Go to town.</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><%= link_to 'Edit page', edit_project_path(@project) %></li>
+           
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>  
 <% else %>
-  <p>Please <%= link_to "log in", new_session_path %> to add a pledge.</p> 
-
+    <p>Please <%= link_to "log in", new_session_path %> to add a pledge.</p> 
 
 <% end %>
-</div>
+
+

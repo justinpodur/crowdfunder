@@ -25,7 +25,7 @@ class RewardsController < ApplicationController
   	@reward.user_id = current_user.id 
 
   	if @reward.save
-  		redirect_to project_path, notice: => "Reward created successfully!"
+  		redirect_to @reward
   	else 
   		render 'projects/show'
   	end
@@ -35,6 +35,7 @@ class RewardsController < ApplicationController
   	@reward = Reward.find(params[:id])
 
   	@reward.destroy
+    redirect_to edit_project_path(params[:project_id])
   end
 
   private

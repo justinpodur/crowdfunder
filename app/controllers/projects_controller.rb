@@ -1,9 +1,10 @@
 class ProjectsController < ApplicationController
-  before_filter :ensure_logged_in, :only => [:show]
+  before_filter :ensure_logged_in, :only => [:show, :new]
   before_filter :set_limit
 
   def index
   	@projects = Project.all
+  
   end
 
   def show
@@ -38,7 +39,7 @@ class ProjectsController < ApplicationController
   def update
   	@project = Project.find(params[:id])
 
-  	if @project.update_attributes(product_params)
+  	if @project.update_attributes(project_params)
   		redirect_to project_path(@project)
   	else
   		render :edit

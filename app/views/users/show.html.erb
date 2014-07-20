@@ -42,10 +42,10 @@
       <ul class="side-nav">
         <li><%= link_to 'upload image' %></li>
         <li><%= link_to 'Edit Page', edit_user_path(@user) %></li>
-        <li><%= link_to 'Create a Project', new_project_path %></li>
+        <li><%= link_to 'Create a Project', projects_path %></li>
         <li><%= link_to "Your Pledges" %></li>
         <li><%= link_to " Your Projects" %></li>
-        <li><%= link_to "Delete Account", user_path(@user), :method => :delete %></li>
+        <li><%= link_to "Delete Account", user_path(current_user), :method => :delete %></li>
       </ul>
       
       <p><img src="http://placehold.it/320x240&text=Ad"/></p>

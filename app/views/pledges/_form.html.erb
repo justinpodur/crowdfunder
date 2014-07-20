@@ -1,0 +1,21 @@
+<%= form_for :pledges do |f| %>
+  <% if @pledge.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @pledge.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :Amount %><br/>
+    <%= f.select(:Amount_in_cents, options_for_select([[$5, 5], [$20, 20], [$50, 50], [$100, 100]])) %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit :class => 'button [radius button]' %>
+  </div>
+<% end %>
+
