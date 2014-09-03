@@ -1,8 +1,9 @@
 <%# add navigation links to this file %>
-<li><a href="/projects/new">New Project</a></li>
+
 <li><a href="/projects">All Projects</a></li>
 <% if current_user %>
 <li><a href="#">Logged in as <%= current_user.name %></a></li>
+<li><a href="/projects/new">New Project</a></li>
 <li><%= link_to "Logout", session_path(current_user), method: :delete %></li>
 <% else %>
 <li><%= link_to "Log in", new_session_path %></li>

@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :ensure_logged_in, :only => [:show, :new]
+  before_filter :ensure_logged_in, :only => [:show, :new, :index]
   before_filter :set_limit
 
   def index
@@ -12,7 +12,6 @@ class ProjectsController < ApplicationController
 
     if current_user
       @pledge = @project.pledges.build
-      @reward = @project.rewards.build
     end
 
   end
@@ -54,7 +53,7 @@ class ProjectsController < ApplicationController
 
   private 
   def project_params
-  	params.require(:project).permit(:name, :description, :image, :goal_in_cents, :deadline, rewards_attributes: [:name, :level, :description])
+  	params.require(:project).permit(:name, :description, :image, :goal_in_cents, :deadline, rewards_attributes: [:id, :name, :level, :description, :_destroy])
   end
 
   def set_limit
