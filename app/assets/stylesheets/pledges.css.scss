@@ -1,3 +1,76 @@
-// Place all the styles related to the pledges controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*.logo-container {
+	background-color: #E4ECF1 ;
+
+}*/
+
+ul.title-area{
+	background-color: #E4ECF1 ;
+	/*padding-top: 8px;*/
+
+
+}
+
+ #app-logo {
+	font-family: merienda one;
+	height: 60px;
+	font-size: 20px;
+	vertical-align: middle;
+	background-color: #E4ECF1;
+	border-right: rotate(37deg);
+
+
+
+	a {
+		font-size: 25px;
+		padding-left: 80px;
+		background-color: #E4ECF1 !important;
+		color: #4B72AB;
+		/*height: 100%;*/
+		padding-top: 8px;
+		
+		margin-top: 0;
+		padding-right: 50px;
+	}
+}
+
+
+
+.nav-top-bar {
+	height: 60px;
+	background-color: #4B72AB;
+}
+
+.top-bar-section {
+	margin-top: 0;
+	/*padding-top: 8px;*/
+	padding-right: 20px;
+	background-color: #4B72AB;
+}
+
+
+ul.right li.has-form{
+	background-color: #4B72AB;
+	padding-top: 8px;
+}
+
+ ul.right li.links {
+	padding-top: 8px;
+	background-color: #4B72AB;
+
+	a {
+		font-family: Lato;
+		background-color:  #4B72AB !important;
+	}
+}
+
+.search-button{
+	background-color: silver
+}
+
+
+#triangle-topleft {
+	width: 0;
+	height: 0;
+	border-top: 60px solid #E4ECF1;
+	border-right: 60px solid #4B72AB;
+}
