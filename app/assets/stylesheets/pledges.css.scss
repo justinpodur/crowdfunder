@@ -5,6 +5,7 @@
 
 ul.title-area{
 	background-color: #E4ECF1 ;
+	height: 60px;
 	/*padding-top: 8px;*/
 
 
@@ -42,6 +43,10 @@ ul.title-area{
 
 .top-bar-section {
 	margin-top: 0;
+	height: 60px;
+	max-width: none !important;
+	position: static;
+
 	/*padding-top: 8px;*/
 	padding-right: 20px;
 	background-color: #4B72AB;
