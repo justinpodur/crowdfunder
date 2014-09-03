@@ -46,7 +46,7 @@ group :development do
 	gem 'rails_layout'
 end
 
-
+gem 'slick_rails'
 # Use unicorn as the app server
 # gem 'unicorn'
 
