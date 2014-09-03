@@ -6,3 +6,29 @@
 	margin-top: 100px;
 	margin-bottom: 100px;
 }
+
+.form-header {
+
+
+	h1 {
+		color: gray;
+		font-family: lato;
+		font-weight: 300;
+		padding-bottom: 20px;
+		padding-top: 10px;
+	}
+}
+
+.form-label {
+	display: none;
+}
+
+.form-buttons {
+	background-color: gray;
+	color: white;
+	border-radius: 2px;
+}
+
+.form-buttons:hover {
+	background-color: silver;
+}
