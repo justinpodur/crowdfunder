@@ -71,6 +71,9 @@ html, body {
 		left: 0;
 		margin-top: 0;
 		padding-bottom: 0;
+		margin-bottom: 0;
+		-webkit-transition: transform 0.4s;
+
 
 		h4 {
 			padding-top: 5px;
@@ -85,9 +88,9 @@ html, body {
 		}
 	}
 
-	figcaption:hover {
-		transition: transform 0.4s;
-		transform: translateY(-20px);
+	figcaption:hover  {
+
+		-webkit-transform: translateY(-30px);
 	}
 
 }
