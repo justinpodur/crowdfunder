@@ -19,7 +19,7 @@ ul.title-area{
 
 	a {
 		font-family: Codystar;
-	font-weight: 300;
+		font-weight: 300;
 		font-size: 25px;
 		padding-left: 80px;
 		background-color: #E4ECF1 !important;
@@ -37,7 +37,7 @@ ul.title-area{
 .nav-top-bar {
 	height: 60px;
 	background-color: white; 
-	 box-shadow: 0 1px 3px #888888;	
+	box-shadow: 0 1px 3px #888888;	
 }
 
 .top-bar-section {
@@ -65,6 +65,11 @@ ul.right li.has-form{
 		font-family: Lato;
 		background-color:  white !important;
 		color: gray
+	}
+
+
+	a:hover {
+		color: silver;
 	}
 }
 
