@@ -36,7 +36,8 @@ ul.title-area{
 
 .nav-top-bar {
 	height: 60px;
-	background-color: #4B72AB;
+	background-color: white; 
+	 box-shadow: 0 1px 3px #888888;	
 }
 
 .top-bar-section {
@@ -47,22 +48,23 @@ ul.title-area{
 
 	/*padding-top: 8px;*/
 	padding-right: 20px;
-	background-color: #4B72AB;
+	background-color: white;
 }
 
 
 ul.right li.has-form{
-	background-color: #4B72AB;
+	background-color: white;
 	padding-top: 8px;
 }
 
  ul.right li.links {
 	padding-top: 8px;
-	background-color: #4B72AB;
+	background-color: white;
 
 	a {
 		font-family: Lato;
-		background-color:  #4B72AB !important;
+		background-color:  white !important;
+		color: gray
 	}
 }
 
@@ -78,5 +80,5 @@ ul.right li.has-form{
 	width: 0;
 	height: 0;
 	border-top: 60px solid #E4ECF1;
-	border-right: 60px solid #4B72AB;
+	border-right: 60px solid white;
 }
