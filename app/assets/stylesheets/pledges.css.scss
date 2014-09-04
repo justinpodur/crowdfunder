@@ -1,27 +1,25 @@
-/*.logo-container {
-	background-color: #E4ECF1 ;
+/*styling for the navigation bar*/
 
-}*/
+.fixed {
+	z-index: 650;
+}
 
 ul.title-area{
 	background-color: #E4ECF1 ;
 	height: 60px;
-	/*padding-top: 8px;*/
 
 
 }
 
  #app-logo {
-	font-family: merriweather sans;
+	
 	height: 60px;
-	font-size: 20px;
 	vertical-align: middle;
 	background-color: #E4ECF1;
-	border-right: rotate(37deg);
-
-
 
 	a {
+		font-family: Codystar;
+	font-weight: 300;
 		font-size: 25px;
 		padding-left: 80px;
 		background-color: #E4ECF1 !important;
@@ -72,8 +70,11 @@ ul.right li.has-form{
 	background-color: silver
 }
 
+.search-button:hover{
+	background-color: gray;
+}
 
-#triangle-topleft {
+#triangle-topleft {  /* this gives the diagonal border to the logo */
 	width: 0;
 	height: 0;
 	border-top: 60px solid #E4ECF1;
