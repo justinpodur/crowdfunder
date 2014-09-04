@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :ensure_logged_in, :only => [:show, :new, :index]
+  before_filter :ensure_logged_in, :except => [:show, :index]
   before_filter :set_limit
 
   def index
