@@ -197,3 +197,33 @@ hr {
 
 	}
 }
+/*styling for the favourties container*/
+
+.favourite-container {
+	padding-top: 60px;
+	padding-bottom: 100px;
+
+	.favourites-header {
+		margin-bottom: 65px;
+
+		h4 {
+			font-size: 40px;
+			font-family: lato;
+			color: gray;
+
+		}
+
+
+	}
+		p {
+			padding-top: 40px;
+			font-family: lato;
+			font-weight: 300;
+			color: gray;
+		}
+
+	img {
+		height: 250px;
+		border: 6px solid #5D7C8B;
+	}
+}
