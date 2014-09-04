@@ -135,3 +135,47 @@ html, body {
 	color: gray;
 	font-size: 40px;
 }
+
+/*styling for the learn more section*/
+.footer-container {
+	margin-top: 65px;
+}
+
+
+.learn-more {
+	background-color: #2E4857;
+
+	h6 {
+		font-family: lato;
+		color: silver;
+	}
+
+	h4 {
+		padding-top: 50px;
+		padding-bottom: 20px;
+		font-family: lato;
+		color: white;
+	}
+
+	p{ 
+		/*padding-bottom: 50px;*/
+		font-family: lato;
+		font-weight: 300;
+		color: silver
+	}
+}
+
+hr {
+	margin-bottom: 0;
+}
+
+
+.social-container {
+	margin-top: 16px;
+}
+
+/*styling for footer links*/
+
+.about-container {
+	padding-left: 200px;
+}
