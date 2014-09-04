@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_filter :ensure_logged_in, only: [:index, :new, :create]
   def new
   end
 
