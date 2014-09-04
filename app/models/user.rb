@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_secure_password
 	
 	has_many :pledges
 	has_many :backed_projects, :through => :pledges, source: :project
@@ -7,5 +8,4 @@ class User < ActiveRecord::Base
 	#reward per project
 
 	validates_presence_of :name, :email, :password
-	has_secure_password
 end
