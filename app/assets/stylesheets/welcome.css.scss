@@ -30,3 +30,67 @@ html, body {
 		width: 100%;
 	}
 }
+
+
+/* styling for the popular posts*/
+
+.popoular-posts {
+	margin-top: 100px;
+}
+
+.popular-posts-header-two {
+	font-family: lato;
+	font-weight: 300;
+	padding-top: 30px;
+}
+
+.each-popular-post {
+	border: 6px solid #5D7C8B;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		display: block;
+		border: 3px solid #5D7C8B;
+	}
+
+
+	#image-two {
+		height: 300px;
+	}
+
+	figcaption {
+		background-color: #5D7C8B;
+		border: 2px solid #5D7C8B;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin-top: 0;
+		padding-bottom: 0;
+
+		h4 {
+			padding-top: 5px;
+			color: white;
+			padding-left: 7px;
+		}
+
+		p {
+			color: white;
+			padding-left: 7px;
+			padding-bottom: 3px;
+		}
+	}
+
+	figcaption:hover {
+		transition: transform 0.4s;
+		transform: translateY(-20px);
+	}
+
+}
+
+
+
