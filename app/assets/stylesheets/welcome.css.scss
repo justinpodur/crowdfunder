@@ -1,6 +1,32 @@
 
+/*styling for the sentence over the slider*/
+.tag-line {
+	position: absolute;
+	z-index: 600;
+	top: 280px;
+	left: 40px;
+		h1 {
+			color: white;
+			font-family: Lato;
+			font-weight: 300;
+			font-size: 60px
+		}
+}
 
-.slider-image {
-	height: 595px;
-	width: 100%;
+/*prevents side scroll*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    z-index: 700;
+}
+
+/*styling for the images in the slider*/
+
+.your-class {
+	z-index: 500;
+
+	img {
+		height: 578px;
+		width: 100%;
+	}
 }
