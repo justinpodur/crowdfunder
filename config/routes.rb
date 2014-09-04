@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
-
+  resources :sessions
   root to: "welcome#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
