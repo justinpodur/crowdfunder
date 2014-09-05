@@ -1,10 +1,10 @@
 
 <div class = "nested-fields">
-  <%= f.label :level %>
-  <%= f.number_field :level %><br>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
-  <%= f.label :description %>
-  <%= f.text_area :description %><br>
+  <%= f.label :level, :class => 'form-label' %>
+  <%= f.number_field :level, :placeholder => " Reward level" %><br>
+  <%= f.label :name, :class => 'form-label' %>
+  <%= f.text_field :name, :placeholder => "Reward name" %><br>
+  <%= f.label :description, :class => 'form-label' %>
+  <%= f.text_area :description, :placeholder => "Description of reward" %><br>
   <%= link_to_remove_association "remove reward", f, :class => 'button [tiny small large] form-buttons' %>
 </div>
