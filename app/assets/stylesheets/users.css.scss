@@ -1,0 +1,27 @@
+.user-container {
+	margin-top: 50px;
+
+	margin-bottom: 100px;
+}
+
+.about-user {
+	h1 {
+		font-family: lato;
+		color: gray;
+	}
+
+	p {
+		font-family: lato;
+		font-weight: 300;
+		color: black;
+	}
+}
+
+.user-image {
+	height: 300px;
+}
+
+.user-links {
+	display: inline;
+	padding-right: 17px;
+}
