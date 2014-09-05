@@ -30,6 +30,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+
+    if current_user
+      @my_projects = @user.owned_projects
+    end 
   end 
 
   def destroy
