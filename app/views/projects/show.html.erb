@@ -25,31 +25,26 @@
     <!-- This code is for the info section -->
       <aside class="large-5 columns">
         <div class="panel">
-          <h5>Info</h5>
           <ul class="side-nav">
-            <li>
-              <div>
-                Backers:
-                <%= @project.pledges.size %>
-              </div>
+            <li class="project-info-list">
+              Backers:
+              <%= @project.pledges.size %>
             </li>
-            <li>
-              <div>
-                Goal: 
-                $<%= @project.goal_in_cents %>
-              </div>
+            <li class="project-info-list">
+              Goal: 
+              $<%= @project.goal_in_cents %>
             </li>
-            <li>
-              <div>
-                Deadline:
-                <%= @project.deadline.strftime("%A, %B %d, %Y")  %>
-              </div>
+            <li class="project-info-list">
+              Deadline:
+              <%= @project.deadline.strftime("%A, %B %d, %Y")  %>
             </li>
           </ul>
-          <!-- <div class="button [radius button]"> -->
-             <%= link_to 'Make a pledge', new_project_pledge_path(@project) do %><br>
-             <small>$5 minimum pledge</small>
-          <!-- </div> -->
+
+          <div class="row">
+            <div class="large-6 large-centered columns">
+              <%= link_to 'Make a pledge $5 minimum', new_project_pledge_path(@project), :class => "button [tiny small large] pledge-button " %>
+            </div>
+          </div>
          
 
           <div class="panel callout">
