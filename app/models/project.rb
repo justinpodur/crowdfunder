@@ -16,4 +16,14 @@ class Project < ActiveRecord::Base
 		sprintf("%.2f", goal_in_dollars)
 	end
 
+
+	def self.search(search)
+
+		if search
+			@projects = Project.where('lower(name) = ?', search.downcase)
+		else 
+			@projects = Project.all
+		end 
+	end
+
 end

@@ -3,7 +3,12 @@ class ProjectsController < ApplicationController
   before_filter :set_limit
 
   def index
-  	@projects = Project.all
+  	@projects = Project.search(params[:search])
+
+    if @projects.size.zero?
+        flash.now[:alert] = "No results found"
+      @projects = Project.all       
+    end
   
   end
 
