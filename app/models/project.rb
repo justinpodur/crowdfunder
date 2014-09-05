@@ -1,9 +1,9 @@
 class Project < ActiveRecord::Base
 
-	has_many :rewards
+	has_many :rewards, dependent: :destroy
 	accepts_nested_attributes_for :rewards, :reject_if => :all_blank, :allow_destroy => true
-	has_many :pledges
-	has_many :backers, :through => :pledges, source: :user, :foreign_key => "user_id"
+	has_many :pledges, dependent: :destroy
+	has_many :backers, :through => :pledges, source: :user, :foreign_key => "user_id", dependent: :destroy
 	belongs_to :owner, class_name: "User"
 
 	validates :description, :name, :deadline, :owner, :presence => true

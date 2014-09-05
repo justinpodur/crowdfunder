@@ -2,7 +2,7 @@ class Pledge < ActiveRecord::Base
 	belongs_to :project
 	belongs_to :user
 
-	has_one :reward
+	has_one :reward, dependent: :destroy
 
 	validates :amount_in_cents, :presence => true
 
