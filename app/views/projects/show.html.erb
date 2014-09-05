@@ -94,30 +94,7 @@
       </div>
     </div>
   </div>
- 
- 
-   
 
- 
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr/>
-      <div class="row">
-        <div class="large-6 columns">
-          <p>© Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><%= link_to 'Edit page', edit_project_path(@project) %></li>
-            <% if @project.pledges.size == 0 %>
-              <li><%= link_to 'Delete page', project_path(@project), method: :delete %></li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-</div>  
 <% else %>
     <p>Please <%= link_to "log in", new_session_path %> to add a pledge.</p> 
 
