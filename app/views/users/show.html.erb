@@ -12,12 +12,12 @@
               <ul class="user-links-container">
                 <li class="user-links">
                   
-                  <%= link_to '', edit_user_path(@user), :class => 'fa fa-pencil' %>
+                  <%= link_to '', edit_user_path(@user), :class => 'fa fa-pencil', :title => "edit account" %>
                 </li>
                 <li class="user-links">
-                  <%= link_to "", user_path(current_user), :method => :delete, :class => 'fa fa-trash-o'  %>
+                  <%= link_to "", user_path(current_user), :method => :delete, :class => 'fa fa-trash-o', :title => "delete account"  %>
                 </li>
-                <li class="user-links"><%= link_to '', new_project_path, :class => 'fa fa-plus' %></li>
+                <li class="user-links"><%= link_to '', new_project_path, :class => 'fa fa-plus', :title => "create a new project" %></li>
               </ul>
 
               <p><strong>Bio: </strong><%=@user.bio%></p>

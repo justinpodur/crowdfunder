@@ -61,11 +61,49 @@
 
 /*styling for the project-indexs page*/
 
+.projects-page-container {
+	
+	background-repeat: no-repeat;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.4)), color-stop(100%,rgba(255,255,255,0.7))), url("http://uploads2.wikiart.org/images/daan-lemaire/winterwoods-g-632-abstract-watercolor-art-on-paper-2007.jpg") repeat 0 0;
+
+
+
+}
+.project-favourites-container{
+	padding-top: 60px;
+	padding-bottom: 100px;
+
+		p {
+		padding-top: 40px;
+		font-family: lato;
+		font-weight: 300;
+		color: #333333;
+		font-size: 17px;
+	}
+
+		img {
+		height: 250px;
+		border: 6px solid #5D7C8B;
+	}
+}
 .projects-index-header {
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 0px;
 	font-family: lato;
-	color: gray;
+	color: #333333;
+}
+
+.project-page-favourites-header {
+	margin-bottom: 65px;
+
+
+	h4 {
+			font-size: 40px;
+			font-family: lato;
+			color: #333333;
+
+		}
+
 }
 
 
@@ -73,7 +111,7 @@
 /* styling for the popular posts*/
 
 .popoular-posts {
-	margin-top: 100px;
+	margin-top: 0px;
 }
 
 .project-caption-header{
@@ -106,22 +144,31 @@
 		bottom: 0;
 		left: 0;
 		margin-top: 0;
-		padding-bottom: 0;
 		margin-bottom: 0;
 		-webkit-transition: transform 0.4s;
 
 
 		h4 {
 			padding-top: 5px;
-			color: white;
 			padding-left: 7px;
+
+			a {
+				color: white !important;
+
+			}
 		}
 
 		p {
 			color: white;
-			padding-left: 7px;
-			padding-bottom: 3px;
+			padding-left: 12px;
+			padding-right: 12px;
+			margin-bottom: 4px;
 			font-size: 9px;
+		}
+
+
+		#deadline {
+			padding-bottom: 5px;
 		}
 	}
 
