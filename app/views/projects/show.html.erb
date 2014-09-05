@@ -42,25 +42,35 @@
 
           <div class="row">
             <div class="large-6 large-centered columns">
-              <%= link_to 'Make a pledge $5 minimum', new_project_pledge_path(@project), :class => "button [tiny small large] pledge-button " %>
+              <%= link_to 'Make a pledge $1 minimum', new_project_pledge_path(@project), :class => "button [tiny small large] pledge-button " %>
             </div>
           </div>
          
 
           <div class="panel callout">
-            <h5>Rewards</h5>
-            <div>
-              <% if @project.rewards != nil %>
-                <% @project.rewards.each do |r| %>
-                  <p>Level : $<%= r.level %></p>
-                  <p>Package : <br><%= r.name %></p>
-                  <p>Description :<%= r.description %></p>
-                <% end %>
-              <% end %>
+            <div class="row">
+              <div class="large-12 columns">
+                <h5 class="text-center rewards-header">Rewards</h5>
+              </div>
+            </div>
+
+
+              <div class="row">
+                <div class="large-12 columns">
+                  <% if @project.rewards != nil %>
+                    <% @project.rewards.each do |r| %>
+                      <p class="reward-info">Level: $<%= r.level %></p>
+                      <p class="reward-info">Package: <%= r.name %></p>
+                      <p class="reward-info">Description :<%= r.description %></p>
+                      <hr>
+                    <% end %>
+                  <% end %>
+                </div>
+              </div>
+
+
             </div>
           </div>
-
-        </div>
       </aside>
 
 
