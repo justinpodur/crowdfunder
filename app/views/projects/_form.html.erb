@@ -1,3 +1,6 @@
+<div class="row">
+  <div class="large-8 large-centered columns">
+    <div class="site-forms">
 
 <%= form_for(@project, html: {multipart: true}) do |f| %>
     <% if @project.errors.any? %>
@@ -12,41 +15,41 @@
         </div>
     <% end %>
     <div class="le_form">
-        <div class="field">
-            <div class="small-12 columns">
-                <label class= "inline"><%= f.label :Project_name %></label> 
-                <%= f.text_field :name %>
-            </div>
+      <div class="field">
+        <div class="small-12 columns">
+          <label class= "inline"><%= f.label :Project_name, :class => 'form-label' %></label> 
+          <%= f.text_field :name, :placeholder => "Project name" %>
         </div>
+      </div>
             
     </div>
 
     <div class="field">
-        <div class="small-12 columns">
-            <label class= "inline"><%= f.label :description %></label>
-            <%= f.text_area :description %>
-        </div>
+      <div class="small-12 columns">
+        <label class= "inline"><%= f.label :description, :class => 'form-label' %></label>
+        <%= f.text_area :description, :placeholder => "Tell us about your project..." %>
+      </div>
     </div>
 
     <div class="field">
-        <div class="small-12 columns">
-            <label class="inline"><%= f.label :image %></label>
-            <%= f.file_field :image %>
-        </div>
+      <div class="small-12 columns">
+        <label class="inline"><%= f.label :image , :class => 'form-label'%></label>
+        <%= f.file_field :image %>
+      </div>
     </div>
             
 
 
     <div class="field">
-        <div class="small-6 columns">
-            <label class= "inline"><%= f.label :goal_in_cents %></label>
-            <%= f.number_field :goal_in_cents %>
+        <div class="small-12 columns">
+            <label class= "inline"><%= f.label :goal_in_cents, :class => 'form-label' %></label>
+            <%= f.number_field :goal_in_cents, :placeholder => 'Goal in cents'  %>
         </div>
     </div>
 
     <div class="field">
-        <div class="small-6 columns">
-            <label class= "inline"><%= f.label :deadline %></label>
+        <div class="small-12 columns">
+            <label class= "inline"><%= f.label :deadline, :class => 'form-label' %></label>
             <%= f.select(:deadline, options_for_select(@limit)) %>
         </div>
     </div>
@@ -61,7 +64,7 @@
             <% end %>
             <div class="small-12 columns">
                 <div class="links">
-                    <%= link_to_add_association 'Add a reward', f, (:rewards), :class => 'button' %> 
+                    <%= link_to_add_association 'Add a reward', f, (:rewards), :class => 'button [tiny small large] form-buttons' %> 
                 </div>
             </div>
         </div>
@@ -70,7 +73,11 @@
     <!-- this needs to be centered -->
     <div class="actions">
         <div class="small-12 columns">
-            <%= f.submit :class => 'button [radius round]' %>
+            <%= f.submit "Create", :class => 'button [tiny small large] form-buttons' %>
         </div>
     </div>
 <% end %>
+
+  </div>
+  </div>
+</div>

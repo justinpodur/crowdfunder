@@ -1,13 +1,23 @@
-<h1>Create a new project</h1>
-<% if current_user %>
-<p>Logged in as <%= current_user.name %></p>
-<% else %>
-<p>Please <%= link_to "log in", new_session_path %> to create a project.</p>
-<% end %>
 
-<p>
-	<%= render 'form' %>
-</p>
-<p>
-	<%= link_to 'Back', projects_path %>
-</p>
+<div class="row">
+  <div class="large-8 large-centered columns">
+    <div class="form-containers">
+
+    <div class="form-header-container">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="form-header">
+            <h1 class="text-center">Create a project</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      
+
+
+			<%= render 'form' %>
+
+    </div>
+  </div>
+</div>
