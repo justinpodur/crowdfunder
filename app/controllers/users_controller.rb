@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
-  before_filter :ensure_logged_in, :only =>[:edit, :create, :show, :update, :destroy]
+  before_filter :ensure_logged_in, :only =>[:edit, :show, :update, :destroy]
   def new
   	@user = User.new
   end
 
   def create
   	@user = User.new(user_params)
+
   	if @user.save
-  		redirect_to projects_url, :notice => "Signed up!"
+  		redirect_to root_url, :notice => "Signed up!"
   	else
   		render "new"
   	end
