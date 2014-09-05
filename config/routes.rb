@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get "log_out" => "sessions#destroy", :as => "log_out"
   resources :projects do
     resources :pledges, :only => [:show, :create, :destroy, :new]
     resources :rewards, :only => [:show, :create, :destroy, :edit, :update]
