@@ -4,6 +4,11 @@
 	margin-bottom: 100px;
 }
 
+.about-user-container {
+		margin-bottom: 70px;
+}
+
+
 .about-user {
 	h1 {
 		font-family: lato;
@@ -24,4 +29,41 @@
 .user-links {
 	display: inline;
 	padding-right: 17px;
+}
+
+/*styling for users current projects*/
+.current-project-container {
+
+	padding-top: 60px;
+	padding-bottom: 100px;
+	p {
+			padding-top: 10px;
+			font-family: lato;
+			font-weight: 300;
+			color: gray;
+	}
+
+	a{
+			font-family: lato;
+			color: gray !important;
+	}
+		
+
+}
+.current-projects-header {
+	margin-top: 50px;
+
+	h1 {
+		font-family: lato;
+		color: gray;
+
+	}
+}
+
+
+
+.user-current-project-image {
+	width: 400px;
+	height: 250px;
+	border: 6px solid #5D7C8B;
 }

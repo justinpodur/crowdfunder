@@ -1,6 +1,6 @@
 <div class="user-container">
   
-  <div class="row">  
+  <div class="row about-user-container">  
     <div class="large-4 columns">
       <%= image_tag @user.image, :class => 'user-image' %>
     </div>
@@ -24,6 +24,27 @@
             </div>
           </div>
   </div>
+<hr>
+  <div class="row current-projects-header">
+    <div class="large-12 columns">
+      <h1 class="text-center">Current projects</h1>
+    </div>
+  </div>
 
-     
+  <div class="current-project-container">
+      <% @my_projects.each do |project| %>
+        <div class="row">
+          <div class="large-5 columns">
+            <%= image_tag project.image, :class => "user-current-project-image" %>
+          </div>
+
+          <div class="large-7 columns ">
+              <h4><%= link_to project.name, project_path(project) %></h4>
+              <p>Deadline: <%= project.deadline.strftime("%A, %B %d, %Y")%></p>
+
+              <p>Description: <%= project.description %></p>
+          </div>
+        </div>
+      <% end %>
+  </div>
 </div>
