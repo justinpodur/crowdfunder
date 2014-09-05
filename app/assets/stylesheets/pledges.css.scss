@@ -3,6 +3,16 @@
 .fixed {
 	z-index: 650;
 }
+.error_messages {
+	z-index: 630;
+	position: absolute;
+	width: 100%
+}
+.alert-box {
+	z-index: 630;
+	position: absolute;
+	width: 100%;
+}
 
 ul.title-area{
 	background-color: #E4ECF1 ;
