@@ -1,25 +1,22 @@
-<%= link_to project_path(project.id) do %>
-<% end %>
-
-<article>
- 
-        <h3><a href=<%= project_path(project.id) %>><%= project.name %></a></h3>
-        <h4>Goal: $<%= project.formatted_goal %></h4>
-        <h5>Funding Deadline: <%= project.deadline.strftime("%A, %B %d, %Y") %></h5>
-        <h6>Project Owner: <a href="#"><%= project.owner.name %></a></h6>
- 
-        <div class="row">
-          <div class="large-6 columns">
-            <p>Description: <%= project.description %></p>
-             
-
+<div class="row popular-projects-container">
+  
+  <% @projects.each do |project| %>
+    <div class="row popoular-posts">
+      <div class="large-4 columns">
+        <figure class='each-project'>
+          <div>
+            <%= image_tag project.image %>
           </div>
-          <div class="large-6 columns">
-	         <%= image_tag project.image.url %>
-           <!--  <img src="http://placehold.it/400x240&text=[img]"/> -->
-          </div>
-        </div>
- 
-</article>
-
-      <hr/>
+            <figcaption>
+              <h4 class="project-caption-header"><%= project.name %></h4>
+              <p><%= project.owner.name%></p>
+              <p><%= truncate(project.description, length: 40) %></p>
+              <p>Deadline: <%= project.deadline.strftime("%A, %B %d, %Y") %></p>
+            </figcaption>
+        </figure>
+      </div>
+      
+      </div>
+  <% end %>
+    
+ </div>

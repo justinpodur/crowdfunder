@@ -1,9 +1,8 @@
      
  
   <div class="row">
-    <div class="large-12 columns">
-      <h1>Projects <small>Choose. Then crowdfund.</small></h1>
-      <hr/>
+    <div class="large-12 columns ">
+      <h1 class="text-center projects-index-header">Discover projects</h1>
     </div>
   </div>
  
@@ -11,34 +10,30 @@
  
  
    
- 
-  <div class="row">
- 
-     
-    <div class="large-9 columns" role="content">
-       <%= render @projects %>
-    </div>
- 
-     
- 
- 
-     
- 
-    <aside class="large-3 columns">
-      <div class="panel">
-        <% if current_user %>
-<h5>Hello, <%= current_user.name %></h5>
-    <p>Here, we will display all of the projects that you are backing.</p>
-        <%= link_to "Logout", session_path(current_user), method: :delete %>
-<% else %>
-<h5>Please <%= link_to "log in", new_session_path %> to create a project.</h5>
-<% end %>
+<%= render @projects %>
 
-      </div>
- 
-    </aside>
- 
-     
+
+
+<hr>
+
+<!-- our picks panel -->
+<div class="favourites-container">
+
+  <div class="row favourites-header">
+    <h4 class="text-center">Our favourite of the week</h4>
   </div>
+
+  <div class="row">
+    <div class="large-5 columns">
+      <img src="http://i.huffpost.com/gen/1665725/thumbs/o-WOMEN-ENGINEER-facebook.jpg">
+    </div>
+
+    <div class="large-7 columns">
+      <p>
+        Ai jokaisen rukoilen tietamaa me ulapalle tarkoita en. Hiisi ero pahaa pilan kayda oli sen jokin kas. Ei ei en sitten yhteen tuolla. Alla itse elan se ukko ai emme uusi. Nuo rahasumma iso vastannut sammuttaa tuo odottaisi haaveensa. Sen kaupunkiin jos kohdallani nyt kerrallaan yha. Jonnekin kun ottaisit nuo naapurin porstuan ilmestys. Koettaen lie menemaan nuo karahtaa pelastaa tai kymmenen. Liikkeelle voi sen kysymyksen loi kun tukkipuuta. 
+      </p>
+    </div>
+  </div>
+</div>
  
    
