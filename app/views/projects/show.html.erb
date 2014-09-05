@@ -3,7 +3,7 @@
   <div class= "row ">
     <div class="large-12 columns project-header" role="content">
       <h1><%= @project.name %></h1>
-      <h5>By: <%= link_to @project.owner.name %></h5>
+      <h5>By: <%= link_to @project.owner.name, user_path(@project.owner) %></h5>
       <hr/>
       <!-- This code is for the image and the description -->
     </div>
