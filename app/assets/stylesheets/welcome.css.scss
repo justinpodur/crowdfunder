@@ -142,6 +142,7 @@ html, body {
 /*styling for the learn more section*/
 .footer-container {
 	margin-top: 65px;
+	bottom: 0;
 }
 
 
@@ -235,4 +236,11 @@ hr {
 		height: 250px;
 		border: 6px solid #5D7C8B;
 	}
+}
+
+
+/*please log lin message*/
+
+.login-message {
+	padding-bottom: 200px;
 }
