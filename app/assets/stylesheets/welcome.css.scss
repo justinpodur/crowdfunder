@@ -16,7 +16,7 @@
 /*prevents side scroll*/
 html, body {
     max-width: 100%;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
     z-index: 700;
 }
 
@@ -24,7 +24,7 @@ html, body {
 
 .your-class {
 	z-index: 500;
-	overflow: hidden;
+	overflow: hidden !important;
 	img {
 		height: 578px;
 		width: 100%;
