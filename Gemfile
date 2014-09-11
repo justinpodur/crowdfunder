@@ -42,6 +42,13 @@ gem 'bcrypt', '~> 3.1.7'
 #Foundation for looks
 gem 'foundation-rails'
 
+# Use fog to support amazon s3 for carrierwave
+gem "fog"
+# Use amazons sdk
+gem 'aws-sdk'
+
+gem 'figaro'
+
 group :development do
 	gem 'rails_layout'
 end
