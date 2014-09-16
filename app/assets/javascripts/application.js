@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require slick
-//= require turbolinks
 //= require foundation
 //= require_tree .
 //= require cocoon.js
