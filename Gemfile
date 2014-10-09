@@ -67,5 +67,12 @@ group :production, :staging do
 	gem 'rails_12factor'
 end 
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'shoulda-matchers', require: false
+  gem "factory_girl_rails"
+  gem 'faker'
+end
+
 
 ruby "2.1.0"
