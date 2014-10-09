@@ -71,8 +71,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'shoulda-matchers', require: false
   gem "factory_girl_rails"
-  gem 'faker'
 end
+  gem 'faker'
 
 
 ruby "2.1.0"

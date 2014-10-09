@@ -6,7 +6,7 @@ class Project < ActiveRecord::Base
 	has_many :backers, :through => :pledges, source: :user, :foreign_key => "user_id", dependent: :destroy
 	belongs_to :owner, class_name: "User"
 
-	validates :description, :name, :deadline, :owner, :presence => true
+	validates :description, :name, :deadline, :owner, :goal_in_cents, :presence => true
 	validates :goal_in_cents, :numericality => {:only_integer => true}
 
 	mount_uploader :image, ImageUploader
