@@ -1,9 +1,9 @@
 require 'faker'
 
 FactoryGirl.define do
-	factory :pledges do
-		email {Faker::Internet.email}
-		name {Faker::Name.name}
-		password 'bobisbob'
+	factory :pledge do
+		project_id 1
+		user_id 1
+		amount_in_cents 5000
 	end
 end

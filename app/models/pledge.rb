@@ -4,7 +4,7 @@ class Pledge < ActiveRecord::Base
 
 	has_one :reward, dependent: :destroy
 
-	validates :amount_in_cents, :presence => true
+	validates :amount_in_cents, :user_id, :project_id, :presence => true
 
 		def formatted_amount
 			amount_in_dollars = amount_in_cents.to_f / 100
